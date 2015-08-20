@@ -1,0 +1,40 @@
+apply plugin: 'scala'
+apply plugin: 'jacoco'
+
+sourceCompatibility = 1.8
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  compile([group:'org.scala-lang' , name:'scala-library', version:"2.11.2"],
+                [group:'org.scalafx',name:'scalafx_2.11',version:"8.0.40-R8"])
+  testCompile([group:'org.scala-lang' , name:'scala-library', version:"2.11.2"],
+                [group:'junit', name:'junit', version: '4.10'],
+                [group:'org.scalatest', name:'scalatest_2.11', version:"2.2.1"],
+                [group:'org.scala-lang', name:'scala-xml', version:"2.11.0-M4"] )
+}
+
+task execute(type:JavaExec){
+  main = 'game.GameOfLife'
+  classpath = sourceSets.main.runtimeClasspath
+}
+
+compileScala {
+    scalaCompileOptions.additionalParameters = ["-feature"]
+}
+
+tasks.withType(ScalaCompile) {
+    scalaCompileOptions.useAnt = false
+}
+
+jacocoTestReport {
+  reports {
+      xml.enabled false
+      csv.enabled false
+      html.destination "build/reports/coverageHtml"
+  }
+}
+
+defaultTasks 'clean', 'test', 'jacocoTestReport', 'execute'

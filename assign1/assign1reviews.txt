@@ -1,0 +1,142 @@
+[Venkat 06/26/15 09:59 AM CEST]
+review: You're done.
+
+Nice.
+
+------------------------------------------------------------------------------
+[Venkat 06/25/15 05:34 AM CEST]
+review: Nice progress
+
+Nice GUI with blinkers.
+
+Nice modular code. See some suggestions to reduce code and improve clarity.
+
+Only task left is to take initial size and also the initial live cells.
+
+------------------------------------------------------------------------------
+[Venkat 06/24/15 07:32 AM CEST]
+review: build failed
+
+>gradle
+:clean UP-TO-DATE
+:compileJava UP-TO-DATE
+:compileScala
+[ant:scalac] error: missing or invalid dependency detected while loading class file 'ControlIncludes.class'.
+[ant:scalac] Could not access type Change in value javafx.scene.control.TextFormatter,
+[ant:scalac] because it (or its dependencies) are missing. Check your build definition for
+[ant:scalac] missing or conflicting dependencies. (Re-run with `-Ylog-classpath` to see the problematic classpath.)
+[ant:scalac] A full rebuild may help if 'ControlIncludes.class' was compiled against an incompatible version of javafx.scene.control.TextFormatter.
+[ant:scalac] error: missing or invalid dependency detected while loading class file 'ControlIncludes.class'.
+[ant:scalac] Could not access type TextFormatter in package javafx.scene.control,
+[ant:scalac] because it (or its dependencies) are missing. Check your build definition for
+[ant:scalac] missing or conflicting dependencies. (Re-run with `-Ylog-classpath` to see the problematic classpath.)
+[ant:scalac] A full rebuild may help if 'ControlIncludes.class' was compiled against an incompatible version of javafx.scene.control.
+[ant:scalac] error: missing or invalid dependency detected while loading class file 'ControlIncludes.class'.
+[ant:scalac] Could not access type TextInputDialog in package javafx.scene.control,
+[ant:scalac] because it (or its dependencies) are missing. Check your build definition for
+[ant:scalac] missing or conflicting dependencies. (Re-run with `-Ylog-classpath` to see the problematic classpath.)
+...
+
+Way too many classes. Revert back to previous version and work up your way
+with absolutely minimum code.
+
+In addition to the GameRules, we need exactly one class (with short methods)
+for the GUI. Keep it minimum, easy to write a lot, hard to be concise.
+
+------------------------------------------------------------------------------
+[Venkat 06/23/15 06:33 AM CEST]
+review: Go for a GUI
+
+Nice to see minimum code.
+Create a GUI instead of console output.
+
+------------------------------------------------------------------------------
+[Venkat 06/21/15 04:40 AM MDT]
+review: nice progress
+
+Nice progress. Move forward
+
+------------------------------------------------------------------------------
+[Venkat 06/20/15 05:11 AM MDT]
+review: There is so much we can do with stateless or minimum state
+
+Such an urge to add state! Rethink. See suggestions for the next tests
+
+------------------------------------------------------------------------------
+[Venkat 06/19/15 18:03 PM MDT]
+review: Good progress.
+
+Good tests
+Proceed to the next set of tests.
+
+GameRules:
+Mixing functional style and mutability is a bad idea.
+Either write imperative (traditional) for loop and mutate,
+or find a way to use functional style with immutability to increment count.
+
+Instead of checking for x != 0... compute the count and then offset by 1
+if the cells at given location is alive. See if that simplifies the code.
+
+------------------------------------------------------------------------------
+[Venkat 06/19/15 09:15 AM CEST]
+review: good progress
+
+GameRulesTest:
+Good work here. 
+
+GameRules:
+Remove the notes I add before asking for review again.
+
+Let's continue working with this class for the next method as well.
+See suggestion in code—we make continue with stateless with a little refactoring.
+
+Package name should have only directory name starting below the scala
+directory. game instead of main.scala.game.
+
+------------------------------------------------------------------------------
+[Venkat 06/18/15 16:06 PM CEST]
+review: good so far
+
+GameRulesTest: 
+Good, see suggestions in code.
+Move forward with the tests for the next function.
+
+------------------------------------------------------------------------------
+[Venkat 06/18/15 04:01 AM CEST]
+review: Keep focus on one class, let's work on that before looking at another
+
+GridDataTest: Remove, let's focus on one things first.
+GridData: Remove, let's focus on one things first.
+
+GameRulesTest: Let's focus on this. The first test is incorrect,
+the rule is different than what the test is doing. See suggestion in code.
+
+------------------------------------------------------------------------------
+[Venkat 06/17/15 04:04 AM CEST]
+review: focus on behavior, let minimum state fall in place.
+
+GridDataTest:
+The test looks complex. Start with a small step, no need to runs to
+a loop when we can do one small thing first.
+
+Don't test getter and setter. Don't focus on state, focus on behavior,
+let the state eventually fall in place. See change suggestion in code.
+
+GameOfLife:
+Remove.
+
+------------------------------------------------------------------------------
+[Venkat 06/16/15 03:50 AM CEST]
+review: take small steps
+
+Way too much code, especially for the first review.
+Evolve the design rather than assuming the strategic design is complete.
+
+Delete everything and start over.
+
+Start with one or two tests and only enough code (just one class, one method) to pass those one or two tests. Ask for review right after that.
+
+Remove any main or UI code, we can get to those later. Ensure the build
+passes and all tests pass by running gradle before checking in.
+
+------------------------------------------------------------------------------

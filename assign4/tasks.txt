@@ -1,0 +1,7 @@
+get +1 element from middle of a list (get next)
+get -1 element from middle of a list (get previous)
+get +1 (first element) from last element in a list (get next)
+get -1 (last element) from first element in a list (get previous)
+
+given a form and a capability, exercise the capability (exercise capability of form)
+

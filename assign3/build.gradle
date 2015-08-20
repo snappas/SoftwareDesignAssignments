@@ -1,0 +1,49 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'org.scoverage:gradle-scoverage:1.0.8'
+    }
+}
+
+apply plugin: 'scoverage'
+apply plugin: 'scala'
+
+sourceCompatibility = 1.8
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  scoverage 'org.scoverage:scalac-scoverage-plugin_2.11:1.1.0', 'org.scoverage:scalac-scoverage-runtime_2.11:1.1.0'
+  
+  compile([group:'org.scala-lang' , name:'scala-library', version:"2.11.+"])
+
+  testCompile([group:'org.scala-lang' , name:'scala-library', version:"2.11.+"],
+                [group:'junit', name:'junit', version: '4.10'],
+                [group:'org.scalatest', name:'scalatest_2.11', version:"2.2.1"],
+		[group:'org.scala-lang', name:'scala-xml', version:"2.11.0-M4"],
+                [group:'org.mockito', name:'mockito-all', version:"1.9.5"])
+}
+
+
+task execute(type:JavaExec){
+  main = 'MainProgram'
+  classpath = sourceSets.main.runtimeClasspath
+}
+
+compileScala {
+    scalaCompileOptions.additionalParameters = ["-feature"]
+}
+
+tasks.withType(ScalaCompile) {
+    scalaCompileOptions.useAnt = false
+}
+testScoverage {
+    scoverage.excludedPackages = ["<empty>"]
+}
+
+
+defaultTasks 'clean', 'test', 'reportScoverage'

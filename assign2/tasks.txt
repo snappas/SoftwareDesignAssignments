@@ -1,0 +1,12 @@
+Tasks:
+
+- get isbn url for an isbn number
+- sort list of tuples (sort by tuple._1)
+- get total of reviews from list of tuples (tuple._2)
+- read an isbn from file
+- read 2 ibsn from file
+- from wrong url get null title and 0 reviews
+- from correct url, title tag not present, reviews not present
+- from correct url, title tag present, reviews not present
+- from correct url, title tag not present, reviews present
+- from correct url, title tag present, reviews present

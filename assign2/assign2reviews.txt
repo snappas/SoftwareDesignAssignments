@@ -1,0 +1,89 @@
+[Venkat 07/10/15 05:36 AM CDT]
+review: You're done
+
+Notice red in coverage report. Remove from coverage the driver code.
+
+When working with live data, keep in mind that data can change. Number of
+reviews may not be the same later on. So, don't hard code review count.
+Instead check for a value > 0 or a value > current value.
+
+After these few changes, you're done.
+
+------------------------------------------------------------------------------
+[Venkat 07/09/15 07:23 AM CDT]
+review: nice progress
+
+Almost there!
+
+------------------------------------------------------------------------------
+[Venkat 07/08/15 07:22 AM PDT]
+review: check coverage report.
+
+Look for red in the coverage report, remove code not being tested.
+
+Very nice progress, good series of tests.
+
+Don't write code without first writing a failing test. Then write code
+minimally to pass the tests.
+
+------------------------------------------------------------------------------
+[Venkat 07/07/15 04:03 AM PDT]
+review: nice progress
+
+move forward
+
+------------------------------------------------------------------------------
+[Venkat 07/06/15 06:02 AM PDT]
+review: revisit the design steps.
+
+Read into the test to see if it burdens the user of the class.
+See suggestions in code.
+
+------------------------------------------------------------------------------
+[Venkat 07/04/15 05:30 AM PDT]
+review: nice progress
+
+Move forward to the next fun part!
+
+------------------------------------------------------------------------------
+[Venkat 07/03/15 07:24 AM PDT]
+review: Very nice progress
+
+Good progression of tests leading the design.
+
+Reduce clutter in code, modularize to improve readability.
+
+------------------------------------------------------------------------------
+[Venkat 07/02/15 03:58 AM PDT]
+review: nice progress, revisit dealing with error
+
+For the failure case, capture the details of failure.
+
+------------------------------------------------------------------------------
+[Venkat 07/01/15 05:15 AM PDT]
+review: very nice progress
+
+Very nice design decisions. Improve code readability, modularize to
+make it easy to quickly see what's going on.
+
+------------------------------------------------------------------------------
+[Venkat 06/30/15 04:32 AM PDT]
+review: postpone to last responsible moment
+
+Good tests.
+
+Some of the tests and code are coming in earlier than needed. See suggestions.
+
+------------------------------------------------------------------------------
+[Venkat 06/29/15 05:35 AM PDT]
+review: excellent start
+
+Include code coverage in the build (see assign1 build file).
+
+Very nice start.
+
+Don't do null checks if methods.
+
+Move on to the next step.
+
+------------------------------------------------------------------------------

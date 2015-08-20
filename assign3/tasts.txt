@@ -1,0 +1,8 @@
+1. canary test
+2. fibonacci at position 0, iterative appraoch should return 1
+3. fibonacci at position 1, iterative appraoch should return 1
+4. fibonacci at position 2, iterative appraoch should return 2
+5. fibonacci at position 3, iterative appraoch should return 3
+6. fibonacci at position 5, iterative appraoch should return 8
+7. fibonacci at position 10, iterative appraoch should return 89
+

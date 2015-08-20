@@ -1,0 +1,82 @@
+[Venkat 08/06/15 07:15 AM CDT]
+review: You're done.
+
+Good job, you're done.
+
+------------------------------------------------------------------------------
+[Venkat 08/05/15 07:20 AM CDT]
+review: honor OCP
+
+Look out for OCP violation.
+
+------------------------------------------------------------------------------
+[Venkat 08/04/15 05:18 AM MDT]
+review: good progress
+
+Nice direction. Minimize a few things. Move forward.
+
+------------------------------------------------------------------------------
+[Venkat 08/03/15 05:42 AM MDT]
+review: good so far, remove some redundant code (YAGNI)
+
+Move to the next step. Provide a way to create a different sequence each time the program is run, but without having to change the code.
+
+------------------------------------------------------------------------------
+[Venkat 08/02/15 06:24 AM CDT]
+review: build failed
+
+.../assign4/src/test/scala/game/PlayerTest.scala:63: value setAvailableAvatars is not a member of game.Player
+    player.setAvailableAvatars(differentListOfAvatars)
+           ^
+.../assign4/src/test/scala/game/PlayerTest.scala:71: value setAvailableAvatars is not a member of game.Player
+    player.setAvailableAvatars(differentListOfAvatars)
+           ^
+
+------------------------------------------------------------------------------
+[Venkat 08/01/15 05:42 AM CDT]
+review: nice progress
+
+Nice progress. Remove test that does not add value here.
+Move forward.
+
+------------------------------------------------------------------------------
+[Venkat 07/31/15 06:41 AM CDT]
+review: good direction
+
+Focus on the essential methods, rework some parts, see suggestion.
+
+------------------------------------------------------------------------------
+[Venkat 07/30/15 06:17 AM CDT]
+review: red in coverage report
+
+either remove the code not tested or write a test for it.
+
+------------------------------------------------------------------------------
+[Venkat 07/29/15 09:56 AM CDT]
+review: too much code, take small steps
+
+Let's get one thing done at a time.
+
+The current first test will fail if we remove the exception (which 
+should not be there for ever).
+
+------------------------------------------------------------------------------
+[Venkat 07/28/15 09:22 AM CDT]
+review: No need for mock
+
+Mock very sparingly, only intricate dependencies.
+
+Take small logical steps.
+
+See suggestion in code.
+
+------------------------------------------------------------------------------
+[Venkat 07/26/15 18:27 PM MDT]
+review: String is not the best choice
+
+Consider something other than String to represent the form.
+
+It is not intuitive why we have to pass an index to the nextForm?
+Consider making this obvious, minimum effort, and less error prone.
+
+------------------------------------------------------------------------------
